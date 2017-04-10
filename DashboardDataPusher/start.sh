@@ -1,3 +1,3 @@
 #! /bin/bash
 
-exec dotnet DashboardDataPusher.dll configuration.json
+exec dotnet DashboardDataPusher.dll /data/configuration.json

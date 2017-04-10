@@ -1,0 +1,16 @@
+[Unit]
+Description=Dashboard Data Pusher
+After=network.target
+
+[Service]
+ExecStartPre=-/usr/bin/docker kill %p
+ExecStartPre=-/usr/bin/docker rm %p
+ExecStart=/usr/bin/docker run --name %p \
+    --volume=/root/configuration.json:/data/configuration.json \
+    %i/%p:20170410 
+ExecStop=/usr/bin/docker stop %p
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
