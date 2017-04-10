@@ -14,5 +14,5 @@ runtime version *2.0.0-preview1-001915-00*
 The base docker images (sceneskope/armv7-dotnet) are built using docker files from [dotnet-core-pi](https://github.com/sceneskope/dotnet-core-pi)
 
 ## Projects
+* [HelloPiDocker](HelloPiDocker/README.md) shows a simple Hello world running on the PI
 * [DashboardDataPusher](DashboardDataPusher/README.md) shows how to push data into a PowerBI dataset.
-
