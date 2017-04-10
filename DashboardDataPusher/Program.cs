@@ -81,6 +81,7 @@ namespace DashboardDataPusher
 
                 var dayStart = DateTime.MinValue;
                 var minuteStart = DateTime.MinValue;
+                Console.WriteLine("Starting");
                 while (!ct.IsCancellationRequested)
                 {
                     var now = DateTime.UtcNow;
