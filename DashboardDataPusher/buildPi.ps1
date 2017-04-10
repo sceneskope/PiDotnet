@@ -1,11 +1,12 @@
 
-#.\buildDotnet2.ps1
 
 $docker = "$PSScriptRoot\docker"
 $publish = "$docker\publish"
 Remove-Item -Recurse $docker -ErrorAction SilentlyContinue
 
-dotnet2 publish -c Release -o $publish
+dotnet restore
+dotnet build -c Release
+dotnet publish -c Release -o $publish
 
 $Tag = $(Get-Date -Format yyyyMMdd)
 
